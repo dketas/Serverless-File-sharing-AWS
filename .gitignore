@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+
+# AWS credentials and config files
+.aws/
+*.pem
+
+# VS Code
+.vscode/
+
+# Node modules (if any)
+node_modules/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Mac stuff
+.DS_Store
+
+# Python virtual environment folders
+venv/
+env/
+

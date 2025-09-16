@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serverless File Sharing System</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Serverless File Sharing System</h1>
+
+    <!-- Login Section (Hidden by default) -->
+    <div id="loginSection" style="display:none;">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- File Actions Section (Hidden by default) -->
+    <div id="fileActionsSection" style="display:none;">
+        <!-- File upload, download, and delete actions go here -->
+        <div class="file-actions">
+            <h3>Upload a File</h3>
+            <input type="file" id="fileInput" />
+            <button onclick="uploadFile()">Upload</button>
+        </div>
+        <div class="file-actions">
+            <h3>Download a File</h3>
+            <select id="fileSelect"></select>
+            <button onclick="downloadFile()">Download</button>
+        </div>
+        <div class="file-actions">
+            <h3>Delete a File</h3>
+            <select id="deleteSelect"></select>
+            <button onclick="deleteFile()">Delete</button>
+        </div>
+        <!-- Logout Button -->
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+
+    <!-- File List Section -->
+    <div class="file-list">
+        <h3>Uploaded Files:</h3>
+        <ul id="fileList"></ul>
+    </div>
+</div>
+
+<!-- Footer content placed at the bottom -->
+<footer>
+    <p>Project designed by <strong>Ketan Dhamane</strong> and <strong>Sailli Patil</strong>.</p>
+</footer>
+
+<!-- Add the AWS SDK for Cognito -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.1020.0/aws-sdk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@4.5.5/dist/amazon-cognito-identity.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
